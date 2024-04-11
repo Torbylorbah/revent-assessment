@@ -1,0 +1,34 @@
+<header class="landing-padding-x flex justify-between pt-10 items-center relative">
+  <div>
+    <img src="assets/images/logo.svg" alt="">
+  </div>
+
+  <div class="md:hidden">
+    <button class="menu-btn" (click)="onClick()">
+      <i [ngClass]="{'fas fa-bars': !isMenuOpen, 'fa fa-times': isMenuOpen}"></i>
+    </button>
+  </div>
+
+  <nav class="hidden lg:block">
+    <ul class="flex gap-10 items-center">
+      <li class="active">Home</li>
+      <li>Contact us</li>
+      <li>About us</li>
+      <button class="rounded-[10px] px-8 py-4 text-white bg-[#7D97F4]">
+        Let’s Talk  👋🏾
+      </button>
+    </ul>
+  </nav>
+
+  <nav class="bg-black text-white p-5 rounded-lg absolute top-20 left-20" *ngIf="isMenuOpen" >
+    <ul class="flex  flex-col gap-4 items-center" >
+      <li class="active">Home</li>
+      <li>Contact us</li>
+      <li>About us</li>
+      <button class="rounded-[10px] px-8 py-4 text-white bg-[#7D97F4]">
+        Let’s Talk  👋🏾
+      </button>
+    </ul>
+  </nav>
+
+</header>
